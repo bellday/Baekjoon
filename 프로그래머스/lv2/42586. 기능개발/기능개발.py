@@ -16,7 +16,7 @@ def solution(progresses, speeds):
             progress_list[i]=progress_list[i]//speeds[i]+1
     #print(progress_list)
     queue=deque(progress_list)
-    print(queue)
+    
     while queue:
         
         if len(queue)==0:
