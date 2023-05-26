@@ -13,10 +13,11 @@ def solution(data, col, row_begin, row_end):
         for j in range(len(data[i])):
             temp = data[i][j]
             data[i][j] = temp%(i+1)
-            
+        
         s+=sum(data[i])  
         answer ^= s
-        print(answer)
+        
+        #print(answer)
     
     
     return answer
