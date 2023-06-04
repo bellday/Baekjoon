@@ -1,5 +1,4 @@
 def solution(order):
-    answer = 0
     stack=[]
     odr=0
     i=1
