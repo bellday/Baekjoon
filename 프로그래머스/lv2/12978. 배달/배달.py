@@ -18,8 +18,7 @@ def solution(N, road, K):
     heapq.heappush(q,(0,1))
     while q:
         dist , now =heapq.heappop(q)
-        if village[now]<dist:
-            continue
+        
         for i in graph[now]:
             cost = dist + i[0]
             if cost < village[i[1]]:
