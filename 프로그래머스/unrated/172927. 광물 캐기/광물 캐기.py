@@ -33,7 +33,7 @@ def solution(picks, minerals):
         check +=5
     # 다이아 철 갯수 카운팅하기
     cnt = sorted(cnt, key = lambda x: (x[0], x[1]) , reverse = True)
-    print(cnt)
+    
     
     
     for i in cnt:
@@ -65,5 +65,5 @@ def solution(picks, minerals):
             answer += i[0] *25
             answer += i[1] * 5
             answer += i[2]
-    print(picks)
+    
     return answer
