@@ -35,7 +35,7 @@ def solution(str1, str2):
             str2_dict[k]=1
         else:
             str2_dict[k]+=1
-    print(str1_dict,str2_dict)
+    
     
     #교집합 & 합집합 구하기
     
@@ -52,9 +52,4 @@ def solution(str1, str2):
         if z not in j_maxlist:
             j_max+=str2_dict[z]
         
-    
-    
-    
-    
-    
     return int((j_min/j_max) * 65536)
