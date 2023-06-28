@@ -2,11 +2,12 @@ def solution(files):
     sort_arr = []
     head, number, tail = '', '', ''
     
-    for file in files:       
-        for i in range(len(file)):
-            if file[i].isdigit():     
-                head = file[:i]
-                number = file[i:]
+    for file in files:  
+        head, number, tail = '', '', ''
+        for key,val in enumerate(file):
+            if file[key].isdigit():     
+                head = file[:key]
+                number = file[key:]
                 
                 for j in range(len(number)):    
                     if not number[j].isdigit():
@@ -15,7 +16,7 @@ def solution(files):
                         break
                         
                 sort_arr.append([head, number, tail])
-                head, number, tail = '', '', ''
+                
                 break
 
     sort_arr = sorted(sort_arr, key=lambda x:(x[0].lower(), int(x[1])))
