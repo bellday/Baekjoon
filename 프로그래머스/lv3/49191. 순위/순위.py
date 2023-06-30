@@ -10,8 +10,8 @@ def solution(n, results):
     answer = 0
     graph = [[0] * (n+1) for _ in range(n+1)]
     for rst in results:
-        graph[rst[0]][rst[1]] = 1
-        graph[rst[1]][rst[0]] = -1
+        graph[rst[0]][rst[1]] = 1 #승리표현
+        graph[rst[1]][rst[0]] = -1  # 패배 표현
     
     answer = floyd(graph)
     return answer
@@ -25,11 +25,11 @@ def floyd(graph):
             #종료 노드(패자)
             for k in range(len(graph)):
                 
-                if graph[j][i] ==1 and  graph [i][k]==1 :
-                    graph[j][k] = 1
-                    graph[k][j]=-1
+                if graph[j][i] ==1 and  graph [i][k]==1 : # j가 i를 이기고 i가 k를 이기면
+                    graph[j][k] = 1# j가 k를 이기고
+                    graph[k][j]=-1 # k가 j에게 진다
     
     for g in graph:
-        if g[1:].count(0) ==1:
+        if g[1:].count(0) ==1: # 0의 수가 1개일 경우 == 자기 자신에 대한 정보만 없을 경우
             cnt+=1
     return cnt
