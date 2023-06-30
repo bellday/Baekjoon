@@ -3,7 +3,7 @@ def dfs(node, graph, visit):
     for i in range(len(graph)):
         if graph[node][i] == 1 and not visit[i]:
             dfs(i, graph, visit)
-            print(node,i)
+            
 
 def solution(n, computers):
     a=1
